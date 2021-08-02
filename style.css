@@ -125,7 +125,7 @@ header h1 {
 }
 
 .imgsom {
-    position: absolute;
+    position: fixed;
     transform: translateY(-50%);
     left: 0;
     right: 0;
