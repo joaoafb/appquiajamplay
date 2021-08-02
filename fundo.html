@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Fundo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="menu">
+
+        <header>
+            <h1 style="font-size: 20pt;" class="h1">Escolha um Fundo:</h1>
+        </header>
+        <div class="fundos">
+
+
+            <img onclick="fundo2()" class="img2" src="https://wallpapersfull.com/wallpapers/2019/suspense-nas-ruinas-wallpaper-17306.jpg" alt="">
+            <br>
+            <img onclick="fundo3()" class="img3" src="https://super.abril.com.br/wp-content/uploads/2019/09/si_pretomit.png" alt="">
+
+        </div>
+        <a href="../index.html">
+            <button id="btn" class="btncomecar">Voltar</button>
+        </a>
+
+
+    </div>
+</body>
+<script src="script.js"></script>
+<script>
+    document.querySelector("body").style.backgroundImage = localStorage.getItem("fundo")
+</script>
+
+</html>

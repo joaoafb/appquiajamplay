@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="menu">
+        <header>
+            <h2 id="historia" class="historia"> Ao abrir seu cofre, todas as suas coisas ainda estavam lá, mas além disso havia um bilhete. Era bonito, enfeitado, lendo apressado, havia as felicitações de seu aniversário<br> e uma frase confusa, dizia:
+            </h2>
+            <h2 id="bilhete" class="historia"> “Quando certa manhã Gregor Samsa acordou de sonhos intranquilos, encontrou-se em sua ___________ metamorfoseado um inseto monstruoso” </h2>
+        </header>
+
+        <br><br>
+
+        <button id="btn" class="btncomecar">Abrir Bilhete</button>
+
+        <br>
+
+
+    </div>
+</body>
+<script>
+    document.querySelector("body").style.backgroundImage = localStorage.getItem("fundo")
+
+    var btn = document.getElementById("btn")
+    var historia = document.getElementById("historia")
+    var bilhete = document.getElementById("bilhete")
+    bilhete.style.display = 'none'
+    btn.onclick = function() {
+        historia.style.display = 'none'
+        bilhete.style.display = 'block'
+
+
+        btn.innerText = 'Descobrir'
+
+        btn.onclick = function() {
+            location.href = "index13.html"
+        }
+    }
+</script>
+
+</html>

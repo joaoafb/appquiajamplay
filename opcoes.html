@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opçoes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="menu">
+        <header>
+            <h1>Opçoes</h1>
+        </header>
+        <a href="fundo.html">
+            <button class="btncomecar">Alterar Fundo</button>
+        </a>
+        <br>
+        <a href="volume.html">
+            <button class="btnopcoes">Alterar Volume</button>
+        </a>
+        <br>
+        <a href="index.html">
+            <button class="btnvoltar">Voltar</button>
+        </a>
+
+    </div>
+</body>
+<script>
+    document.querySelector("body").style.backgroundImage = localStorage.getItem("fundo")
+</script>
+
+</html>

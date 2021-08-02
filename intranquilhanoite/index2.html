@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="menu">
+        <header>
+            <h2 class="historia">Digite a Antiga Senha do Cofre</h2>
+        </header>
+        <div>
+            <img class="imgcofre" src="https://image.flaticon.com/icons/png/512/642/642196.png" alt="">
+        </div>
+
+        <input autocomplete="off" required id="input" class="inputcofre" type="text" placeholder="Digite Aqui">
+        <br>
+        <h1 style="color: rgb(47, 255, 64);font-size: 13pt;transition: all 1s;" id="msg"></h1>
+        <button id="btn" class="btncomecar">Checar Senha</button>
+
+
+        <br>
+
+
+    </div>
+</body>
+<script>
+    document.querySelector("body").style.backgroundImage = localStorage.getItem("fundo")
+
+    var btn = document.getElementById("btn")
+    var input = document.getElementById("input");
+    var msg = document.getElementById("msg")
+    senha = input.value;
+
+    btn.onclick =
+        function() {
+            if (input.value == "2021") {
+                msg.innerHTML = 'SENHA CORRETA!'
+                btn.innerText = 'Abrir Cofre'
+
+                btn.onclick = function() {
+                    location.href = 'index3.html'
+                }
+            } else {
+                msg.style.color = ' red'
+                msg.innerHTML = 'SENHA INCORRETA!'
+                btn.innerText = 'Voltar ao Texto'
+
+                btn.onclick = function() {
+                    location.href = 'index1.html'
+                }
+            }
+        }
+</script>
+
+</html>

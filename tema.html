@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha um Tema</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="menu">
+        <header>
+            <h1>Escolha um Tema:</h1>
+        </header>
+        <a href="intranquilhanoite/loading.html">
+            <button class="btncomecar">A Intranquilha Noite de Bartolomeu</button>
+        </a>
+        <br>
+        <a href="matematica/loading.html">
+            <button class="btnopcoes">Quiz Matemática</button>
+        </a>
+        <br>
+        <a href="portugues/index.html">
+            <button class="btnopcoes">Quiz Português</button>
+        </a>
+        <br>
+        <a href="index.html">
+            <button class="btnvoltar">Voltar</button>
+        </a>
+
+    </div>
+</body>
+<script>
+    document.querySelector("body").style.backgroundImage = localStorage.getItem("fundo")
+</script>
+
+</html>

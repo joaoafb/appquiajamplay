@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="menu">
+        <header>
+
+        </header>
+
+        <br><br>
+
+        <h1 id="msg" style="background-color: white;border-radius: 50px;padding: 10px;" class="historia">ERRO</h1>
+        <br> <br>
+        <a href="../index.html">
+            <button id="btn" class="btncomecar">Voltar ao Inicio</button>
+        </a>
+
+    </div>
+</body>
+<SCript>
+    document.querySelector("body").style.backgroundImage = localStorage.getItem("fundo")
+
+    var msg = document.getElementById("msg")
+    var pontos = localStorage.getItem("pontos");
+
+    msg.style.color = 'rgb(47, 255, 64)';
+    msg.innerText = "Parabens!! Você Acertou " +
+        pontos + " de 9";
+
+    if (pontos <= '0') {
+        msg.style.color = 'red';
+        msg.innerText = "Infelismente Você Só Acertou " +
+            pontos + " de 9";
+    }
+</SCript>
+
+</html>

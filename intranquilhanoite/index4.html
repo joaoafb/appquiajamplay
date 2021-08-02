@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="menu">
+        <header>
+            <h2 class="historia">Considerando que <strong>X=5</strong></h2>
+        </header>
+
+        <h2 class="formula">F(X)=4x+6</h2>
+
+
+        <input value="F(5)=" id="input" class="inputcofre" type="text" placeholder="Digite Aqui">
+        <br>
+        <h1 style="color: rgb(47, 255, 64);font-size: 13pt;transition: all 1s;" id="msg"></h1>
+
+        <button id="btn" class="btncomecar">Checar Resposta</button>
+
+
+        <br>
+
+
+    </div>
+</body>
+<script>
+    document.querySelector("body").style.backgroundImage = localStorage.getItem("fundo")
+
+    var btn = document.getElementById("btn")
+    var input = document.getElementById("input");
+    var msg = document.getElementById("msg")
+    senha = input.value;
+
+    btn.onclick =
+        function() {
+            if (input.value == "F(5)=26") {
+                msg.innerHTML = 'VOCÊ ACERTOU!'
+                btn.innerText = 'CONTINUAR'
+                msg.style.color = 'rgb(47, 255, 64)'
+                btn.onclick = function() {
+                    location.href = 'index5.html'
+                }
+            } else {
+                msg.style.color = ' red'
+                msg.innerHTML = 'RESPOSTA INCORRETA!'
+                btn.innerText = 'TENTAR NOVAMENTE'
+
+
+            }
+        }
+</script>
+
+</html>

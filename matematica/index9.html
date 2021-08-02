@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="menu">
+        <header>
+            <h2 class="historia"> Se ontem fosse amanhã, hoje seria sexta-feira. Que dia é hoje?</h2>
+
+        </header>
+        <br><br>
+        <button id="btn1" class="btncomecar">Sexta-Feira</button>
+        <br><br>
+        <button id="btn2" class="btncomecar">Domingo</button>
+        <br><br>
+        <button id="btn3" class="btncomecar">Quarta-Feira</button>
+        <br><br>
+        <button id="btn4" class="btncomecar">Segunda</button>
+        <br><br>
+        <button id="btn5" class="btncomecar">Finalizar</button>
+
+
+    </div>
+</body>
+<script>
+    document.querySelector("body").style.backgroundImage = localStorage.getItem("fundo")
+
+    var btn1 = document.getElementById("btn1")
+    var btn2 = document.getElementById("btn2")
+    var btn4 = document.getElementById("btn3")
+    var btn3 = document.getElementById("btn4")
+    var btn5 = document.getElementById("btn5")
+
+    btn5.style.opacity = '0'
+
+    btn1.onclick = function() {
+        btn1.style.color = 'white'
+        btn1.style.backgroundColor = 'red'
+        btn1.style.border = 'none'
+
+        btn2.style.color = 'white'
+        btn2.style.backgroundColor = 'red'
+        btn2.style.border = 'none'
+
+        btn3.style.color = 'white'
+        btn3.style.backgroundColor = 'red'
+        btn3.style.border = 'none'
+
+        btn4.style.border = 'none'
+        btn4.style.backgroundColor = 'green'
+
+        btn5.style.opacity = '100'
+
+    }
+    btn2.onclick = function() {
+        btn1.style.color = 'white'
+        btn1.style.backgroundColor = 'red'
+        btn1.style.border = 'none'
+
+        btn2.style.color = 'white'
+        btn2.style.backgroundColor = 'red'
+        btn2.style.border = 'none'
+
+        btn3.style.color = 'white'
+        btn3.style.backgroundColor = 'red'
+        btn3.style.border = 'none'
+
+        btn4.style.border = 'none'
+        btn4.style.backgroundColor = 'green'
+
+        btn5.style.opacity = '100'
+
+    }
+
+    btn3.onclick = function() {
+        btn1.style.color = 'white'
+        btn1.style.backgroundColor = 'red'
+        btn1.style.border = 'none'
+
+        btn2.style.color = 'white'
+        btn2.style.backgroundColor = 'red'
+        btn2.style.border = 'none'
+
+        btn3.style.color = 'white'
+        btn3.style.backgroundColor = 'red'
+        btn3.style.border = 'none'
+
+        btn4.style.border = 'none'
+        btn4.style.backgroundColor = 'green'
+
+        btn5.style.opacity = '100'
+
+    }
+
+    btn4.onclick = function() {
+        btn1.style.color = 'white'
+        btn1.style.backgroundColor = 'red'
+        btn1.style.border = 'none'
+
+        btn2.style.color = 'white'
+        btn2.style.backgroundColor = 'red'
+        btn2.style.border = 'none'
+
+        btn3.style.color = 'white'
+        btn3.style.backgroundColor = 'red'
+        btn3.style.border = 'none'
+
+        btn4.style.border = 'none'
+        btn4.style.backgroundColor = 'green'
+
+        btn5.style.opacity = '100'
+
+        localStorage.setItem("pontos", "9")
+        localStorage.getItem("pontos")
+    }
+
+    btn5.onclick = function() {
+        location.href = 'final.html'
+
+    }
+</script>
+
+</html>
