@@ -120,8 +120,10 @@
         btn5.style.opacity = '100'
 
 
-        localStorage.setItem("pontos", "7")
-        localStorage.getItem("pontos")
+        var pontos = localStorage.getItem("pontos")
+        pontos = +pontos + Number("1")
+        localStorage.setItem("pontos", pontos)
+        var pontos = localStorage.getItem("pontos")
     }
 
     btn5.onclick = function() {

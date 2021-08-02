@@ -21,7 +21,7 @@
         <h1 id="msg" style="background-color: white;border-radius: 50px;padding: 10px;" class="historia">ERRO</h1>
         <br> <br>
         <a href="../index.html">
-            <button id="btn" class="btncomecar">Voltar ao Inicio</button>
+            <button id="btn" onclick="zerar()" class="btncomecar">Voltar ao Inicio</button>
         </a>
 
     </div>
@@ -40,6 +40,10 @@
         msg.style.color = 'red';
         msg.innerText = "Infelismente Você Só Acertou " +
             pontos + " de 9";
+    }
+
+    function zerar() {
+        localStorage.setItem("pontos", "0")
     }
 </SCript>
 <script src="som.js"></script>

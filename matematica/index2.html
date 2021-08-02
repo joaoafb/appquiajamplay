@@ -31,6 +31,8 @@
     </div>
 </body>
 <script>
+    document.querySelector("body").style.backgroundImage = localStorage.getItem("fundo")
+
     var btn4 = document.getElementById("btn1")
     var btn2 = document.getElementById("btn2")
     var btn3 = document.getElementById("btn3")
@@ -116,8 +118,10 @@
 
         btn5.style.opacity = '100'
 
-        localStorage.setItem("pontos", "2")
-        localStorage.getItem("pontos")
+        var pontos = localStorage.getItem("pontos")
+        pontos = +pontos + Number("1")
+        localStorage.setItem("pontos", pontos)
+        var pontos = localStorage.getItem("pontos")
     }
 
     btn5.onclick = function() {

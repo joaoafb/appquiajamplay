@@ -48,6 +48,7 @@
     btn5.style.opacity = '0'
 
     btn1.onclick = function() {
+
         btn1.style.color = 'white'
         btn1.style.backgroundColor = 'red'
         btn1.style.border = 'none'
@@ -64,6 +65,8 @@
         btn3.style.backgroundColor = 'green'
 
         btn5.style.opacity = '100'
+
+
 
     }
     btn2.onclick = function() {
@@ -104,8 +107,10 @@
 
         btn5.style.opacity = '100'
 
-        localStorage.setItem("pontos", "11")
-        localStorage.getItem("pontos")
+        var pontos = localStorage.getItem("pontos")
+        pontos = +pontos + Number("1")
+        localStorage.setItem("pontos", pontos)
+        var pontos = localStorage.getItem("pontos")
     }
 
     btn4.onclick = function() {
