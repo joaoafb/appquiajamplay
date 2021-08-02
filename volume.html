@@ -13,13 +13,14 @@
 
     <div class="menu">
         <header>
+            <audio src="musica/musica2.mp3" autoplay></audio>
             <h1>Volume</h1>
         </header>
 
-        <button class="btncomecar">Normal</button>
+        <button class="btncomecar" onclick="normal()">Normal</button>
 
         <br>
-        <button class="btnopcoes">Muto</button>
+        <button class="btnopcoes" onclick="mutar()">Muto</button>
         <br>
         <a href="index.html">
             <button class="btnvoltar">Voltar</button>
@@ -29,6 +30,64 @@
 </body>
 <script>
     document.querySelector("body").style.backgroundImage = localStorage.getItem("fundo")
+</script>
+<script>
+    var som = localStorage.getItem("som")
+    var audio = document.querySelector("audio")
+    var semaudio = document.getElementById("semaudio")
+    var comaudio = document.getElementById("comaudio")
+
+
+    if (som == '0') {
+        audio.volume = '0'
+        var semaudio = document.getElementById("semaudio")
+        var comaudio = document.getElementById("comaudio")
+
+
+    }
+
+    if (som == '100') {
+        audio.volume = '1000'
+        var semaudio = document.getElementById("semaudio")
+        var comaudio = document.getElementById("comaudio")
+
+
+    }
+
+    function mutar() {
+        localStorage.setItem("som", '0')
+        var som = localStorage.getItem("som")
+        var audio = document.querySelector("audio")
+        audio.volume = som
+    }
+
+    function voltar() {
+        localStorage.setItem("som", '1')
+        var som = localStorage.getItem("som")
+        var audio = document.querySelector("audio")
+        audio.volume = som
+    }
+
+
+
+
+    if (som == '0') {
+        var semaudio = document.getElementById("semaudio")
+        var comaudio = document.getElementById("comaudio")
+
+        semaudio.style.display = 'none'
+        comaudio.style.display = 'block'
+    }
+
+
+
+    if (som == '1') {
+        var semaudio = document.getElementById("semaudio")
+        var comaudio = document.getElementById("comaudio")
+
+        semaudio.style.display = 'block'
+        comaudio.style.display = 'none'
+    }
 </script>
 
 </html>

@@ -11,22 +11,113 @@
 
 <body>
 
+
     <div class="menu">
         <header>
-            <h1>QUIJAM PLAY</h1>
+            <h1 style="font-size: 35pt;">QUIJAM PLAY</h1>
+            <audio src="musica/musica1.mp3" autoplay></audio>
         </header>
+
         <a href="tema.html">
-            <button class="btncomecar">Começar</button>
+            <button onclick="click()" id="btncomecar" class="btncomecar">Começar</button>
         </a>
         <br>
         <a href="opcoes.html">
-            <button class="btnopcoes">Opçoes</button>
+            <button id="btnopcoes" class="btnopcoes">Opçoes</button>
         </a>
-
+        <img class="imgsom" onmousedown="mutar()" id="semaudio" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUheJu7LP7PxtYLS8GI9A-Ygw0E0EfmsdBtMCkYI5Xx-4ofoUnrsUQfcdyG-XZ-57eLTA&usqp=CAU" width="40px" style="border-radius:50px;margin-top: -15px;"
+            alt="">
+        <br>
+        <img class="imgsom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHZWdCa_RgqxNEyL8g3ouP6h0IITsGkzEXyLYBJhl_1TqulH2N8h0WUPtok4aYHiuOkio&usqp=CAU" id="comaudio" width="40px" style="border-radius:50px" onclick="voltar()" alt="">
     </div>
 </body>
 <script>
+    var btn = document.getElementById("btncomecar")
+    var btn2 = document.getElementById("btnopcoes")
+
+    btn.onmouseenter =
+        function click() {
+            var audio = new Audio('musica/click.wav');
+            audio.play();
+        }
+    btn2.onmouseenter =
+        function click() {
+            var audio = new Audio('musica/click.wav');
+            audio.play();
+        }
+
     document.querySelector("body").style.backgroundImage = localStorage.getItem("fundo")
+
+
+
+
+
+    var som = localStorage.getItem("som")
+    var audio = document.querySelector("audio")
+    var semaudio = document.getElementById("semaudio")
+    var comaudio = document.getElementById("comaudio")
+
+
+    if (som == '0') {
+        audio.volume = '0'
+        var semaudio = document.getElementById("semaudio")
+        var comaudio = document.getElementById("comaudio")
+
+
+    }
+
+    if (som == '100') {
+        audio.volume = '1000'
+        var semaudio = document.getElementById("semaudio")
+        var comaudio = document.getElementById("comaudio")
+
+
+    }
+
+    function mutar() {
+
+        localStorage.setItem("som", '0')
+        var som = localStorage.getItem("som")
+        var audio = document.querySelector("audio")
+        audio.volume = som
+        location.reload();
+    }
+
+    function voltar() {
+
+        localStorage.setItem("som", '1')
+        var som = localStorage.getItem("som")
+        var audio = document.querySelector("audio")
+        audio.volume = som
+        location.reload();
+    }
+
+
+
+
+    if (som == '0') {
+        var semaudio = document.getElementById("semaudio")
+        var comaudio = document.getElementById("comaudio")
+
+        semaudio.style.display = 'none'
+        comaudio.style.display = 'block'
+    }
+
+
+
+    if (som == '1') {
+        var semaudio = document.getElementById("semaudio")
+        var comaudio = document.getElementById("comaudio")
+
+        semaudio.style.display = 'block'
+        comaudio.style.display = 'none'
+    }
+
+    function click() {
+        var audio = new Audio('musica/click.wav');
+        audio.play();
+    }
 </script>
+<script src="click.js"></script>
 
 </html>

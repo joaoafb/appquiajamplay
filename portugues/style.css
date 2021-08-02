@@ -1,6 +1,6 @@
 body {
-    height: 100%;
-    width: 100%;
+    height: 95%;
+    width: 95%;
     background-size: 235%;
     background-image: url("https://wallpapersfull.com/wallpapers/2019/suspense-nas-ruinas-wallpaper-17306.jpg");
     user-select: none;
@@ -27,8 +27,8 @@ body {
     background-color: transparent;
     border-radius: 50px;
     font-size: 15pt;
-    width: 80%;
-    height: 60px;
+    width: 70%;
+    height: 50px;
 }
 
 .btnopcoes {
@@ -38,8 +38,8 @@ body {
     background-color: transparent;
     border-radius: 50px;
     font-size: 15pt;
-    width: 80%;
-    height: 60px;
+    width: 70%;
+    height: 50px;
     margin-top: 2%;
 }
 
@@ -50,7 +50,6 @@ header h1 {
     transition: all 2s;
     text-align: center;
     color: white;
-    transition: all 1s;
 }
 
 .btncomecar:hover {
@@ -73,7 +72,7 @@ header h1 {
     background-color: white;
     border-radius: 50px;
     font-size: 15pt;
-    width: 80%;
+    width: 7%;
     height: 50px;
 }
 
@@ -83,54 +82,59 @@ header h1 {
     background-color: transparent;
 }
 
-.fundos img {
-    width: 150px;
-}
-
-.img2 {
-    margin-bottom: 10px;
+.historia {
     transition: all 1s;
-    border: 2px solid white;
-    border-radius: 10px;
-    height: 83px;
+    padding-right: 50px;
+    padding-left: 50px;
+    color: white;
+    font-size: 20pt;
 }
 
-.img3 {
-    margin-bottom: 10px;
-    transition: all 1s;
-    border: 2px solid white;
-    border-radius: 10px;
-    width: 100px;
-    height: 83px;
+.imgcofre {
+    width: 10%;
 }
 
-.img1:hover {
-    transition: all 1s;
-    transform: scale(120%);
-}
-
-.img2:hover {
-    transition: all 1s;
-    transform: scale(120%);
-}
-
-.img3:hover {
-    transition: all 1s;
-    transform: scale(120%);
-}
-
-.img4:hover {
-    transition: all 1s;
-    transform: scale(120%);
-}
-
-.imgsom {
-    position: absolute;
-    transform: translateY(-50%);
-    left: 0;
-    right: 0;
-    left: 47%;
-    top: 130%;
-    transition: all 2s;
+.inputcofre {
+    box-shadow: 0 1px 10px black;
+    margin-top: 20px;
+    font-size: 15pt;
     text-align: center;
+    outline: none;
+    border: 0;
+    border-radius: 50px;
+    height: 50px;
+    width: 70%;
+    margin-bottom: 5%;
+}
+
+.formula {
+    transition: all 1s;
+    outline: none;
+    text-align: center;
+    font-size: 25pt;
+    margin-left: 15%;
+    width: 70%;
+    height: 50px;
+    border-radius: 50px;
+    background-color: white;
+    color: black;
+}
+
+.formula:hover {
+    transition: all 1s;
+    color: white;
+    background-color: black;
+}
+
+.boxrespostas {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+@media screen and (max-width: 320px) {
+    .menu {
+        top: -6%;
+        transform: scale(90%);
+    }
 }

@@ -13,24 +13,22 @@
 
     <div class="menu">
         <header>
-            <audio src="musica/musica1.mp3" autoplay></audio>
-            <h2 class="historia"> Qual dos Autores Abaixo é Escritor do Realismo?</h2>
+            <h2 class="historia"> Complete a frase:</h2>
+            <audio src="musica/musica2.mp3" autoplay></audio>
         </header>
-
-        <button id="btn1" class="btncomecar">José de Alencar </button>
-
+        <button style="height: 100%;background-color: black;color: white;font-size: 20pt;" class="btncomecar">
+            A feição deles é serem pardos, um tanto avermelhados, de bons rostos e _________
+            bem-feitos  </button>
         <br><br>
-        <button id="btn2" class="btncomecar">José de Anchieta </button>
-
+        <button id="btn1" class="btncomecar">Bons olhos</button>
         <br><br>
-        <button id="btn3" class="btncomecar">Caravaggio </button>
-
+        <button id="btn2" class="btncomecar">Bons narizes</button>
         <br><br>
-        <button id="btn4" class="btncomecar">Fiódor Dostoiévski </button>
-
+        <button id="btn3" class="btncomecar">Bons costumes</button>
         <br><br>
-
-        <button id="btn5" class="btncomecar">Próximo</button>
+        <button id="btn4" class="btncomecar">Bons perfumes</button>
+        <br><br>
+        <button id="btn5" class="btncomecar">Proximo</button>
 
 
     </div>
@@ -39,9 +37,9 @@
     document.querySelector("body").style.backgroundImage = localStorage.getItem("fundo")
 
     var btn1 = document.getElementById("btn1")
-    var btn2 = document.getElementById("btn2")
+    var btn4 = document.getElementById("btn2")
     var btn3 = document.getElementById("btn3")
-    var btn4 = document.getElementById("btn4")
+    var btn2 = document.getElementById("btn4")
     var btn5 = document.getElementById("btn5")
 
     btn5.style.opacity = '0'
@@ -123,10 +121,13 @@
 
         btn5.style.opacity = '100'
 
+
+        localStorage.setItem("pontos", "5")
+        localStorage.getItem("pontos")
     }
 
     btn5.onclick = function() {
-        location.href = 'index8.html'
+        location.href = 'index6.html'
 
     }
 </script>

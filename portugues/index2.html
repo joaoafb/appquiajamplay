@@ -13,37 +13,31 @@
 
     <div class="menu">
         <header>
-            <audio src="musica/musica1.mp3" autoplay></audio>
-            <h2 class="historia"> Qual dos Autores Abaixo é Escritor do Realismo?</h2>
+            <h2 class="historia">Vamos supor que você corrige uma pessoa que está falando uma palavra "errada " no seu ponto de vista, isso é considerado preconceito linguístico?</h2>
+            <audio src="musica/musica3.mp3" autoplay></audio>
         </header>
-
-        <button id="btn1" class="btncomecar">José de Alencar </button>
-
         <br><br>
-        <button id="btn2" class="btncomecar">José de Anchieta </button>
-
+        <button id="btn1" class="btncomecar">Sim</button>
         <br><br>
-        <button id="btn3" class="btncomecar">Caravaggio </button>
-
+        <button id="btn2" class="btncomecar">Não</button>
         <br><br>
-        <button id="btn4" class="btncomecar">Fiódor Dostoiévski </button>
-
+        <button id="btn3" class="btncomecar">10</button>
         <br><br>
-
-        <button id="btn5" class="btncomecar">Próximo</button>
+        <button id="btn4" class="btncomecar">12</button>
+        <br><br>
+        <button id="btn5" class="btncomecar">Proximo</button>
 
 
     </div>
 </body>
 <script>
-    document.querySelector("body").style.backgroundImage = localStorage.getItem("fundo")
-
-    var btn1 = document.getElementById("btn1")
+    var btn4 = document.getElementById("btn1")
     var btn2 = document.getElementById("btn2")
     var btn3 = document.getElementById("btn3")
-    var btn4 = document.getElementById("btn4")
+    var btn1 = document.getElementById("btn4")
     var btn5 = document.getElementById("btn5")
-
+    btn1.style.display = 'none'
+    btn3.style.display = 'none'
     btn5.style.opacity = '0'
 
     btn1.onclick = function() {
@@ -123,10 +117,12 @@
 
         btn5.style.opacity = '100'
 
+        localStorage.setItem("pontos", "2")
+        localStorage.getItem("pontos")
     }
 
     btn5.onclick = function() {
-        location.href = 'index8.html'
+        location.href = 'index3.html'
 
     }
 </script>

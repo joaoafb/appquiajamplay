@@ -13,15 +13,13 @@
 
     <div class="menu">
         <header>
+            <audio src="musica/musica2.mp3" autoplay></audio>
             <h1>Opçoes</h1>
         </header>
         <a href="fundo.html">
             <button class="btncomecar">Alterar Fundo</button>
         </a>
-        <br>
-        <a href="volume.html">
-            <button class="btnopcoes">Alterar Volume</button>
-        </a>
+
         <br>
         <a href="index.html">
             <button class="btnvoltar">Voltar</button>
@@ -32,5 +30,6 @@
 <script>
     document.querySelector("body").style.backgroundImage = localStorage.getItem("fundo")
 </script>
+<script src="som.js"></script>
 
 </html>

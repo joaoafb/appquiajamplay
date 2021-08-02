@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="menu">
+        <header>
+            <h2 class="historia">Um escritor americano é autor da seguinte frase: “Não grite por socorro à noite. Pode acordar os vizinhos.” Tal frase apresenta um problema textual, que é:</h2>
+            <audio src="musica/musica1.mp3" autoplay></audio>
+        </header>
+
+        <br><br>|<br>
+        <input autocomplete="off" onclick="mostrar()" id="input" class="inputcofre" type="text" placeholder="Digite Aqui">
+
+        <br><br>
+        <button style="transition: all 5s;" id="btn5" onclick="proximo()" class="btncomecar">Proximo</button>
+
+
+
+    </div>
+</body>
+<script>
+    document.querySelector("body").style.backgroundImage = localStorage.getItem("fundo")
+
+    var btn1 = document.getElementById("btn1")
+    var btn4 = document.getElementById("btn2")
+    var btn3 = document.getElementById("btn3")
+    var btn2 = document.getElementById("btn4")
+    var btn5 = document.getElementById("btn5")
+
+    btn5.style.opacity = '0'
+
+    function mostrar() {
+        btn5.style.opacity = '100'
+    }
+
+    function proximo() {
+        var input = document.getElementById("input")
+        localStorage.setItem("escritoramericano", input.value)
+        location.href = 'final.html'
+    }
+</script>
+<script src="som.js"></script>
+
+</html>
