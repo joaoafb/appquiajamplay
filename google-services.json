@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "46822888027",
+    "project_id": "quijam-play",
+    "storage_bucket": "quijam-play.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46822888027:android:156f2eac65f1475a94257e",
+        "android_client_info": {
+          "package_name": "com.quijamplay.byjvdev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "46822888027-ms4lsk45v0anllqiv0lhp97t40f58jns.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKA-Fcl9PjzK6VB7pGQ9SEGwLh8itLDvI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "46822888027-ms4lsk45v0anllqiv0lhp97t40f58jns.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

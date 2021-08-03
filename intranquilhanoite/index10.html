@@ -2,6 +2,8 @@
 <html lang="PT-BR">
 
 <head>
+
+    <link rel="shortcut icon" href="fav1.png" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +22,7 @@
 
         <button style="background-color: black;color: white;font-size: 20pt;" class="btncomecar">X-20 = 80</button>
         <br><br>
-        <input autocomplete="off" id="input" class="inputcofre" type="text" placeholder="Digite Aqui">
+        <input maxlength="3" pattern="([0-9]{3})" autocomplete="off" id="input" class="inputcofre" type="text" placeholder="Digite Aqui">
         <br>
         <h1 style="color: rgb(47, 255, 64);font-size: 13pt;transition: all 1s;" id="msg"></h1>
 
@@ -40,7 +42,7 @@
 
     btn.onclick =
         function() {
-            if (input.value == "x=100") {
+            if (input.value == "100") {
                 msg.innerHTML = 'VOCÊ ACERTOU!';
                 btn.innerText = 'CONTINUAR';
                 msg.style.color = 'rgb(47, 255, 64)';
@@ -50,10 +52,9 @@
                 }
 
 
-
             } else {
                 msg.style.color = ' red';
-                msg.innerHTML = 'RESPOSTA INCORRETA!';
+                msg.innerHTML = 'RESPOSTA  INCORRETA!';
                 btn.innerText = 'TENTAR NOVAMENTE';
             }
         }

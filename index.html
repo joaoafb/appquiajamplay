@@ -7,29 +7,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="fav1.png" />
+
+
 </head>
 
 <body>
 
-
     <div class="menu">
         <header>
-            <h1 style="font-size: 35pt;">QUIJAM PLAY</h1>
-            <audio src="musica/musica1.mp3" autoplay></audio>
-        </header>
 
-        <a href="tema.html">
-            <button onclick="click()" id="btncomecar" class="btncomecar">Começar</button>
-        </a>
-        <br>
-        <a href="opcoes.html">
-            <button id="btnopcoes" class="btnopcoes">Opçoes</button>
-        </a>
-        <img class="imgsom" onmousedown="mutar()" id="semaudio" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUheJu7LP7PxtYLS8GI9A-Ygw0E0EfmsdBtMCkYI5Xx-4ofoUnrsUQfcdyG-XZ-57eLTA&usqp=CAU" width="40px" style="border-radius:50px;margin-top: -15px;"
-            alt="">
-        <br>
-        <img class="imgsom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHZWdCa_RgqxNEyL8g3ouP6h0IITsGkzEXyLYBJhl_1TqulH2N8h0WUPtok4aYHiuOkio&usqp=CAU" id="comaudio" width="40px" style="border-radius:50px" onclick="voltar()" alt="">
-    </div>
+            <div class="box" id="box">
+                <h2 class="h1nome" id="txt">Poderia me Responder <br>Algumas Perguntas?</h2>
+                <div id="divbtn">
+                    <button onclick="mostrarinput()" class="btnsim">Sim</button>
+                    <button onclick="fecha()" class="btnnao">Agora Não!</button>
+                </div>
+                <br>
+                <div id="divinput">
+                    <input class="input" id="input" type="text" placeholder="Digite Aqui" autocomplete="off" required>
+                    <input onclick="final()" class="btnproximo" type="submit" value="Proximo">
+
+                </div>
+                <div id="msg">
+                    <h2 class="h1nome">Muito Obrigado Por Responder!</h2>
+                    <h1 class="h1nome">Esse Jogo Foi Criado Por:<br>João Vitor Alves, Mariana Fraga, Antonio Manuel e Joaquim Francisco</h1>
+                    <button onclick="jogo()" class="btnabrir">Abrir Jogo</button>
+                </div>
+            </div>
+
+
+
+            <div class="menu" id="menu">
+                <header>
+                    <img class="logo" id="logo" src="logo.png" alt="">
+
+                    <audio src="musica/musica1.mp3" autoplay></audio>
+                </header>
+
+                <a href="tema.html">
+                    <button id="btncomecar" class="btncomecar">Começar</button>
+                </a>
+                <br>
+                <a href="opcoes.html">
+                    <button id="btnopcoes" class="btnopcoes">Opçoes</button>
+                </a> <br>
+
+                <img class="imgsom" onmousedown="mutar()" id="semaudio" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUheJu7LP7PxtYLS8GI9A-Ygw0E0EfmsdBtMCkYI5Xx-4ofoUnrsUQfcdyG-XZ-57eLTA&usqp=CAU" width="40px" style="border-radius:50px;margin-top: -15px;"
+                    alt="">
+                <br>
+                <img class="imgsom" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHZWdCa_RgqxNEyL8g3ouP6h0IITsGkzEXyLYBJhl_1TqulH2N8h0WUPtok4aYHiuOkio&usqp=CAU" id="comaudio" width="40px" style="border-radius:50px" onclick="voltar()" alt="">
+            </div>
 </body>
 <script>
     document.querySelector("body").style.backgroundImage = localStorage.getItem("fundo")
@@ -98,12 +126,9 @@
         semaudio.style.display = 'block'
         comaudio.style.display = 'none'
     }
-
-    function click() {
-        var audio = new Audio('musica/click.wav');
-        audio.play();
-    }
 </script>
+<script src="time.js"></script>
 <script src="click.js"></script>
+<script src="box.js"></script>
 
 </html>

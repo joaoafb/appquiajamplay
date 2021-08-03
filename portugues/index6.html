@@ -2,6 +2,7 @@
 <html lang="PT-BR">
 
 <head>
+    <link rel="shortcut icon" href="fav1.png" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +17,7 @@
             <h2 class="historia"> Complete a frase:</h2>
             <audio src="musica/musica3.mp3" autoplay></audio>
         </header>
-        <button style="width: 90%;height: 100%;background-color: black;color: white;font-size: 20pt;" class="btncomecar">E velejando nós pelas costas, na distância de _____ do sítio onde tínhamos levantado
+        <button style="border-radius: 10px;padding: 10px;;width: 90%;height: 100%;background-color: black;color: white;font-size: 20pt;" class="btncomecar">E velejando nós pelas costas, na distância de _____ do sítio onde tínhamos levantado
             ferro,acharam os ditos _____ pequenos um recife com um porto dentro ,muito bom e muito
             seguro, com uma _____ larga entrada. </button>
         <br><br>
@@ -122,8 +123,10 @@
         btn5.style.opacity = '100'
 
 
-        localStorage.setItem("pontos", "5")
-        localStorage.getItem("pontos")
+        var pontospt = localStorage.getItem("pontospt")
+        pontospt = +pontospt + Number("1")
+        localStorage.setItem("pontospt", pontospt)
+        var pontospt = localStorage.getItem("pontospt")
     }
 
     btn5.onclick = function() {

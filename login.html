@@ -6,33 +6,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opçoes</title>
+    <title>Inicio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+
     <div class="menu">
         <header>
-            <audio src="musica/musica2.mp3" autoplay></audio>
-            <h1>Volume</h1>
-        </header>
 
-        <button class="btncomecar" onclick="normal()">Normal</button>
+            <div class="box" id="box">
+                <h2 class="h1nome" id="txt">Poderia me Responder <br>Algumas Perguntas?</h2>
+                <div id="divbtn">
+                    <button onclick="mostrarinput()" class="btnsim">Sim</button>
+                    <button class="btnnao">Agora Não!</button>
+                </div>
+                <br>
+                <div id="divinput">
+                    <input class="input" type="text" placeholder="Digite Aqui" autocomplete="off" required>
+                    <input onclick="final()" class="btnproximo" type="submit" value="Proximo">
 
-        <br>
-        <button class="btnopcoes" onclick="mutar()">Muto</button>
-        <br>
-        <a href="index.html">
-            <button class="btnvoltar">Voltar</button>
-        </a>
+                </div>
+                <div id="msg">
+                    <h2 class="h1nome">Muito Obrigado Por Responder!</h2>
+                    <h1 class="h1nome">Não Se Preocupe, isso não irá aparecer mais!</h1>
+                    <button onclick="jogo()" class="btnabrir">Abrir Jogo</button>
+                </div>
+            </div>
+
 
     </div>
 </body>
 <script>
     document.querySelector("body").style.backgroundImage = localStorage.getItem("fundo")
-</script>
-<script>
+
+
+
+
+
     var som = localStorage.getItem("som")
     var audio = document.querySelector("audio")
     var semaudio = document.getElementById("semaudio")
@@ -56,17 +68,21 @@
     }
 
     function mutar() {
+
         localStorage.setItem("som", '0')
         var som = localStorage.getItem("som")
         var audio = document.querySelector("audio")
         audio.volume = som
+        location.reload();
     }
 
     function voltar() {
+
         localStorage.setItem("som", '1')
         var som = localStorage.getItem("som")
         var audio = document.querySelector("audio")
         audio.volume = som
+        location.reload();
     }
 
 
@@ -89,6 +105,13 @@
         semaudio.style.display = 'block'
         comaudio.style.display = 'none'
     }
+
+    function click() {
+        var audio = new Audio('musica/click.wav');
+        audio.play();
+    }
 </script>
+<script src="click.js"></script>
+<script src="box.js"></script>
 
 </html>

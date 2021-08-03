@@ -2,6 +2,8 @@
 <html lang="PT-BR">
 
 <head>
+
+    <link rel="shortcut icon" href="fav1.png" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,57 +49,42 @@
         btn1.style.backgroundColor = 'red'
         btn1.style.border = 'none'
 
-        btn2.style.color = 'white'
-        btn2.style.backgroundColor = 'red'
-        btn2.style.border = 'none'
+        alert("Você Errou! Infelizmente terá que recomeçar o quiz!")
 
-        btn3.style.color = 'white'
-        btn3.style.backgroundColor = 'red'
-        btn3.style.border = 'none'
+        setInterval(function() {
+            location.href = "../tema.html"
 
-        btn4.style.border = 'none'
-        btn4.style.backgroundColor = 'green'
-
-        btn5.style.opacity = '100'
+            localStorage.setItem("pontos", "0")
+        }, 2000);
 
     }
     btn2.onclick = function() {
-        btn1.style.color = 'white'
-        btn1.style.backgroundColor = 'red'
-        btn1.style.border = 'none'
+
 
         btn2.style.color = 'white'
         btn2.style.backgroundColor = 'red'
         btn2.style.border = 'none'
+        alert("Você Errou! Infelizmente terá que recomeçar o quiz!")
 
-        btn3.style.color = 'white'
-        btn3.style.backgroundColor = 'red'
-        btn3.style.border = 'none'
+        setInterval(function() {
+            location.href = "../tema.html"
 
-        btn4.style.border = 'none'
-        btn4.style.backgroundColor = 'green'
-
-        btn5.style.opacity = '100'
-
+            localStorage.setItem("pontos", "0")
+        }, 2000);
     }
 
     btn3.onclick = function() {
-        btn1.style.color = 'white'
-        btn1.style.backgroundColor = 'red'
-        btn1.style.border = 'none'
-
-        btn2.style.color = 'white'
-        btn2.style.backgroundColor = 'red'
-        btn2.style.border = 'none'
 
         btn3.style.color = 'white'
         btn3.style.backgroundColor = 'red'
         btn3.style.border = 'none'
+        alert("Você Errou! Infelizmente terá que recomeçar o quiz!")
 
-        btn4.style.border = 'none'
-        btn4.style.backgroundColor = 'green'
+        setInterval(function() {
+            location.href = "../tema.html"
+            localStorage.setItem("pontos", "0")
 
-        btn5.style.opacity = '100'
+        }, 2000);
 
     }
 

@@ -2,6 +2,8 @@
 <html lang="PT-BR">
 
 <head>
+
+    <link rel="shortcut icon" href="fav1.png" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +18,7 @@
             <h2 class="historia"> Complete a frase:</h2>
             <audio src="musica/musica2.mp3" autoplay></audio>
         </header>
-        <button style="height: 100%;background-color: black;color: white;font-size: 20pt;" class="btncomecar">
+        <button style="height: 100%;background-color: black;color: white;font-size: 20pt;border-radius: 10px;padding: 10px;" class="btncomecar">
             A feição deles é serem pardos, um tanto avermelhados, de bons rostos e _________
             bem-feitos  </button>
         <br><br>
@@ -122,8 +124,10 @@
         btn5.style.opacity = '100'
 
 
-        localStorage.setItem("pontos", "5")
-        localStorage.getItem("pontos")
+        var pontospt = localStorage.getItem("pontospt")
+        pontospt = +pontospt + Number("1")
+        localStorage.setItem("pontospt", pontospt)
+        var pontospt = localStorage.getItem("pontospt")
     }
 
     btn5.onclick = function() {

@@ -2,6 +2,7 @@
 <html lang="PT-BR">
 
 <head>
+    <link rel="shortcut icon" href="fav1.png" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,15 +26,19 @@
             <img onclick="fundo3()" id="btn2" class="img3" src="https://super.abril.com.br/wp-content/uploads/2019/09/si_pretomit.png" alt="">
 
         </div>
-        <a href="../index.html">
-            <button id="btn" class="btncomecar">Voltar</button>
-        </a>
+
+        <button onclick="goback()" id="btn" class="btncomecar">Voltar</button>
+
 
 
     </div>
 </body>
 <script src="script.js"></script>
 <script>
+    function goback() {
+        window.history.back()
+    }
+
     document.querySelector("body").style.backgroundImage = localStorage.getItem("fundo")
 </script>
 <script src="som.js"></script>
